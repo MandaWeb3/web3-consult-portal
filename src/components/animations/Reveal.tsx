@@ -27,8 +27,9 @@ const Reveal: React.FC<RevealProps> = ({
         if (entry.isIntersecting) {
           setTimeout(() => {
             if (ref.current) {
-              ref.current.classList.add('animate-in');
-              ref.current.classList.remove('animate-out');
+              ref.current.classList.add('opacity-100');
+              ref.current.classList.remove('opacity-0');
+              ref.current.style.transform = 'translate(0, 0)';
             }
           }, delay);
         }
@@ -74,7 +75,10 @@ const Reveal: React.FC<RevealProps> = ({
         noAnimation ? 'opacity-100' : getDirectionClass(),
         className
       )}
-      style={{ transitionDelay: `${delay}ms` }}
+      style={{ 
+        transitionDelay: `${delay}ms`,
+        transform: noAnimation ? 'none' : undefined
+      }}
     >
       {children}
     </div>
