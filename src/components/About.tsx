@@ -26,30 +26,21 @@ const About: React.FC = () => {
               <div className="space-y-6">
                 <h3 className="text-2xl md:text-3xl font-bold">Blockchain Pioneer & AI Strategist</h3>
                 <p className="text-foreground/80 text-xl">
-                  I've spent the last decade at the intersection of blockchain and artificial intelligence, helping organizations navigate the complexities of these transformative technologies.
-                </p>
-                <p className="text-foreground/80 text-xl">
-                  My approach combines deep technical knowledge with strategic business thinking, ensuring solutions that not only leverage cutting-edge technology but also align with your business objectives.
+                In the rapidly evolving landscapes of Web3, AI, and digital transformation, I am the strategic partner companies trust to navigate complexity, unlock new revenue streams, and drive measurable business outcomes. With a track record of scaling ecosystems, restructuring tokenomics, and architecting next-generation solutions, I specialize in turning innovation into a tangible business impact.
+
                 </p>
 
                 <p className="text-foreground/80 text-xl">
-                  My approach combines deep technical knowledge with strategic business thinking, ensuring solutions that not only leverage cutting-edge technology but also align with your business objectives.
-                </p>
+                As a senior advisor, investor, and business strategist, I have collaborated with global enterprises, governments, and VC funds, delivering solutions that bridge blockchain, AI, and digital finance. From leading multi-million-dollar ecosystem expansions across Polkadot, Ethereum, and Avalanche to designing regulatory-compliant token economies and orchestrating high-stakes infrastructure deals, my expertise is rooted in delivering tangible ROI—not just ideas.
+                  </p>
 
-                <p className="text-foreground/80 text-xl">
-                  My approach combines deep technical knowledge with strategic business thinking, ensuring solutions that not only leverage cutting-edge technology but also align with your business objectives.
-                </p>
-
-                <p className="text-foreground/80 text-xl">
-                  My approach combines deep technical knowledge with strategic business thinking, ensuring solutions that not only leverage cutting-edge technology but also align with your business objectives.
-                </p>
                 
                 <div className="grid grid-cols-2 gap-y-8 gap-x-4 pt-6">
                   {[
+                    { icon: <Cpu className="h-8 w-8 text-web3-accent" />, title: "Web3 Business Development" },
+                    { icon: <Zap className="h-8 w-8 text-web3-accent" />, title: "Web3 Development" },
                     { icon: <Shield className="h-8 w-8 text-web3-primary" />, title: "Security Focused" },
-                    { icon: <Cpu className="h-8 w-8 text-web3-accent" />, title: "Web3 Development" },
-                    { icon: <Brain className="h-8 w-8 text-web3-primary" />, title: "AI Integration" },
-                    { icon: <Zap className="h-8 w-8 text-web3-accent" />, title: "Performance" }
+                    { icon: <Brain className="h-8 w-8 text-web3-primary" />, title: "AI Integration" }
                   ].map((item, index) => (
                     <Reveal key={index} delay={index * 100}>
                       <div className="flex items-center space-x-3">

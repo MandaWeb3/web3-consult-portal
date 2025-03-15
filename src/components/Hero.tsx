@@ -133,7 +133,7 @@ const Hero: React.FC = () => {
               <div id="calendly-popup" style={{ display: 'none' }}>
                 <PopupWidget
                   url="https://calendly.com/nikola-mandic-web3/30min"
-                  rootElement={document.getElementById("root")}
+                  rootElement={document.getElementById("root") as HTMLElement} // Type assertion to ensure it's not null
                   text="Click here to schedule!"
                   textColor="#ffffff"
                   color="#00a2ff"
@@ -143,7 +143,7 @@ const Hero: React.FC = () => {
               <div className="hidden">
                 <PopupWidget
                   url="https://calendly.com/nikola-mandic-web3/30min"
-                  rootElement={document.getElementById("root")}
+                  rootElement={document.getElementById("root") as HTMLElement} // Type assertion to ensure it's not null
                   text="Click here to schedule!"
                   textColor="#ffffff"
                   color="#00a2ff"

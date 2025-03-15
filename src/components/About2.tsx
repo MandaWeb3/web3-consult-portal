@@ -1,9 +1,7 @@
 
 import React from 'react';
 import { Reveal } from './animations/Reveal';
-import { Link, Code, Database, Globe, MessageSquareCode, FileCode, Wallet, ChartBarIncreasing, TrendingUp } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Button } from './ui/Button';
+import { Globe, Wallet, TrendingUp } from 'lucide-react';
 
 interface ServiceCardProps {
   title: string;
@@ -66,36 +64,6 @@ const About2: React.FC = () => {
         "Growth Strategy",
         "Revenue Optimization"
       ]
-    },
-    {
-      icon: <Globe className="h-6 w-6" />,
-      title: "Global Advisory",
-      description: "Strategic guidance across Singapore, Malaysia, UAE, Saudi Arabia, and China",
-      bulletPoints: [
-        "Market Entry Strategy",
-        "Regional Partnerships",
-        "Regulatory Compliance"
-      ],
-    },
-    {
-      icon: <Wallet className="h-6 w-6" />,
-      title: "Fundraising Expert",
-      description: "Secured over $10M+ in funding for Web3 projects",
-      bulletPoints: [
-        "Venture Capital",
-        "Strategic Investors",
-        "Token Economics"
-      ],
-    },
-    {
-      icon: <TrendingUp className="h-6 w-6" />,
-      title: "Revenue Generation",
-      description: "Generated $3M+ in Annual Recurring Revenue",
-      bulletPoints: [
-        "Business Development",
-        "Growth Strategy",
-        "Revenue Optimization"
-      ]
     }
   ];
 
@@ -133,23 +101,3 @@ const About2: React.FC = () => {
 };
 
 export default About2;
-
-// Import Brain icon
-function Brain({ className }: { className?: string }) {
-  return (
-    <svg 
-      xmlns="http://www.w3.org/2000/svg" 
-      viewBox="0 0 24 24" 
-      fill="none" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round" 
-      className={cn("lucide lucide-brain", className)}
-    >
-      <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5V5a2 2 0 0 0 2 2h.5A2.5 2.5 0 0 1 17 9.5a2.5 2.5 0 0 1 2.5 2.5.5.5 0 0 1-.5.5h-.5a2 2 0 0 0-2 2v.5a2.5 2.5 0 0 1-2.5 2.5 2.5 2.5 0 0 1-2.5-2.5.5.5 0 0 0-.5-.5 2 2 0 0 1-2-2v-.5A2.5 2.5 0 0 0 6.5 9.5a2.5 2.5 0 0 0-2.5 2.5A.5.5 0 0 1 3.5 12a2.5 2.5 0 0 1-2.5-2.5v-2A4.5 4.5 0 0 1 5.5 3H6a2 2 0 0 0 2-2 .5.5 0 0 1 .5-.5H9Z" />
-      <path d="M17 12a5 5 0 0 0-10 0" />
-      <path d="M12 17a5 5 0 0 0 0-10" />
-    </svg>
-  );
-}

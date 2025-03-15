@@ -1,40 +1,9 @@
-
-import React, { useState } from 'react';
+import React from 'react';
 import { Reveal } from './animations/Reveal';
-import { Mail, MessageSquare, Send } from 'lucide-react';
-import { Button } from './ui/Button';
+import { Mail, MessageSquare } from 'lucide-react';
 import { InlineWidget } from "react-calendly";
 
 const Contact: React.FC = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
-  };
-  
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      setFormData({ name: '', email: '', message: '' });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 1500);
-  };
-  
   return (
     <section id="contact" className="py-20 md:py-32 bg-gradient-to-b from-background to-background/80">
       <div className="container mx-auto px-4">
@@ -58,7 +27,7 @@ const Contact: React.FC = () => {
                       </div>
                       <div>
                         <h4 className="font-medium">Email</h4>
-                        <p className="text-foreground/70">contact@yourdomain.com</p>
+                        <p className="text-foreground/70">nikola.mandic@dualx.com</p>
                       </div>
                     </div>
                     
@@ -70,8 +39,8 @@ const Contact: React.FC = () => {
                       <div>
                         <h4 className="font-medium">Social</h4>
                         <div className="flex space-x-3 text-foreground/70">
-                          <a href="#" className="hover:text-web3-primary transition-colors">Twitter</a>
-                          <a href="#" className="hover:text-web3-primary transition-colors">LinkedIn</a>
+                          <a href="https://x.com/mandaweb3" className="hover:text-web3-primary transition-colors">Twitter</a>
+                          <a href="https://www.linkedin.com/in/nikolaweb3/" className="hover:text-web3-primary transition-colors">LinkedIn</a>
                           <a href="https://t.me/mandaw3b" className="hover:text-web3-primary transition-colors">Telegram</a>
                         </div>
                       </div>
@@ -79,8 +48,6 @@ const Contact: React.FC = () => {
                   </div>
                 </div>
               </Reveal>
-
-
 
               <Reveal delay={200}>
                 <div className="p-6 rounded-2xl bg-web3-primary/5 border border-web3-primary/20">
@@ -90,29 +57,23 @@ const Contact: React.FC = () => {
                   </p>
                 </div>
               </Reveal>
-
-
             </div>
             
             <Reveal direction="left">
               <div className="bg-white rounded-2xl p-6 lg:p-8 shadow-xl border border-gray-100">
-               
-              <InlineWidget styles={{width: '100%', height: '600px'}} url="https://calendly.com/nikola-mandic-web3/30min" pageSettings={{
-  backgroundColor: 'ffffff',
-  hideEventTypeDetails: true,
-  hideLandingPageDetails: false,
-  hideGdprBanner: true,
-  primaryColor: '00a2ff',
-  textColor: '4d5055'
-}}/>
+                <InlineWidget styles={{width: '100%', height: '600px'}} url="https://calendly.com/nikola-mandic-web3/30min" pageSettings={{
+                  backgroundColor: 'ffffff',
+                  hideEventTypeDetails: true,
+                  hideLandingPageDetails: false,
+                  hideGdprBanner: true,
+                  primaryColor: '00a2ff',
+                  textColor: '4d5055'
+                }}/>
               </div>
             </Reveal>
           </div>
         </div>
       </div>
-
-
-     
     </section>
   );
 };

@@ -1,9 +1,8 @@
 
 import React from 'react';
 import { Reveal } from './animations/Reveal';
-import { Link, Code, Database, Globe, MessageSquareCode, FileCode } from 'lucide-react';
+import { Link, Code, Database, Globe, MessageSquareCode } from 'lucide-react';
 import { cn } from '@/lib/utils';
-import { Button } from './ui/Button';
 
 interface ServiceCardProps {
   title: string;
@@ -31,33 +30,33 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: <Link className="h-6 w-6" />,
-      title: "Blockchain Development",
-      description: "Custom blockchain solutions, smart contracts development, and Web3 application architecture."
+      title: "Web3 Ecosystem Growth & Business Development Consulting",
+      description: "Help organizations scale their Web3 products by developing strategic partnerships, optimizing revenue models, and transitioning from traditional service models to product-driven ecosystems."
     },
     {
       icon: <Code className="h-6 w-6" />,
-      title: "Smart Contract Auditing",
-      description: "Comprehensive security audits to identify vulnerabilities in your smart contracts and blockchain applications."
+      title: "Blockchain Strategy & Tokenomics Advisory",
+      description: "Design and refine tokenomics frameworks for decentralized finance projects and blockchain-based solutions, ensuring sustainable and robust economic models."
     },
     {
       icon: <Brain className="h-6 w-6" />,
-      title: "AI Integration",
-      description: "Implementing artificial intelligence solutions that enhance your business processes and decision-making."
+      title: "Investment Advisory & Due Diligence Services",
+      description: "Evaluate emerging Web3 projects and blockchain startups through comprehensive due diligence, risk assessment, and investment analysis to secure optimal returns."
     },
     {
       icon: <Database className="h-6 w-6" />,
-      title: "Token Economics",
-      description: "Designing sustainable tokenomics models for blockchain projects and cryptocurrency initiatives."
+      title: "Community Building & Engagement Strategy",
+      description: "Leverage your experience in building thriving Web3 communities—organizing events, managing digital engagement, and mentoring startups—to foster vibrant, active ecosystems."
     },
     {
       icon: <Globe className="h-6 w-6" />,
-      title: "Web3 Strategy",
-      description: "Strategic guidance on Web3 adoption, blockchain implementation, and decentralized application development."
+      title: "Technical Product & Integration Consulting",
+      description: "Guide companies in developing and integrating innovative blockchain solutions by advising on product specifications, technical integrations, and go-to-market strategies."
     },
     {
       icon: <MessageSquareCode className="h-6 w-6" />,
-      title: "Technical Consulting",
-      description: "Expert advice on blockchain architecture, protocol selection, and technical implementation details."
+      title: "Strategic Partnerships & Alliance Management",
+      description: "Facilitate high-impact collaborations by leveraging your extensive network and negotiation skills to secure alliances with key stakeholders across leading blockchain ecosystems."
     }
   ];
 
